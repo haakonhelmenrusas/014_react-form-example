@@ -1,0 +1,12 @@
+.component {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 2px 2px 16px rgba(255, 250, 250, 0.5);
+}
+.heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+}
