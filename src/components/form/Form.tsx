@@ -4,11 +4,18 @@ import Button from "../button/Button";
 import Input from "../input/Input";
 
 const Form: React.FC = (): JSX.Element => {
+
   const [count, setCount] = useState(0);
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
+
+  const submitForm = (event: any) => {
+    event.preventDefault();
+    console.log(name, password)
+  };
+
   return (
-    <form className={styles.component}>
+    <form onSubmit={submitForm} className={styles.component}>
       <h1 className={styles.heading}>Login form</h1>
       <Input
         type="text"
