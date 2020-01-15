@@ -3,30 +3,22 @@ import React from "react";
 import styles from "./Button.module.css";
 
 type ButtonType = "button" | "submit" | "reset";
+type ButtonStyle = "primary" | "danger";
 
 interface ButtonProps {
   type?: ButtonType;
   label: string;
-  primary?: boolean;
+  buttonStyle: ButtonStyle;
   onClick: (e: React.MouseEvent<HTMLButtonElement>) => any;
 }
 
 const Button: React.FC<ButtonProps> = (props): JSX.Element => {
-  const { label, onClick, primary, type } = props;
-
-  if (primary) {
+  const { label, onClick, buttonStyle, type } = props;
     return (
-      <button type={type} onClick={e => onClick(e)} className={styles.primary}>
+      <button type={type} onClick={e => onClick(e)} className={[styles.button, styles[buttonStyle]].join(' ')}>
         {label}
       </button>
     );
-  }
-
-  return (
-    <button type={type} onClick={e => onClick(e)} className={styles.button}>
-      {label}
-    </button>
-  );
 };
 
 export default Button;

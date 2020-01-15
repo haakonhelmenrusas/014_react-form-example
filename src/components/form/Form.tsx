@@ -34,7 +34,7 @@ const Form: React.FC = (): JSX.Element => {
       />
       <Button
         type="submit"
-        primary
+        buttonStyle="primary"
         onClick={() => setCount(count + 1)}
         label="Login"
       />

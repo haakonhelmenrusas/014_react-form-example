@@ -31,20 +31,10 @@
 *  Primary styles 
 */
 .primary {
-  width: 100%;
-  height: 48px;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 8px 16px;
-  border-radius: 4px;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  cursor: pointer;
-  background-image: none;
   color: hsl(0, 100%, 100%);
   background-color: hsl(211, 100%, 44%);
-  border: 1px solid transparent;
+}
+.danger {
+  color: hsl(0, 100%, 100%);
+  background-color: hsl(0, 80%, 38%);
 }
