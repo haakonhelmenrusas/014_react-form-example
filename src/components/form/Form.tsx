@@ -5,7 +5,6 @@ import Input from "../input/Input";
 
 const Form: React.FC = (): JSX.Element => {
 
-  const [count, setCount] = useState(0);
   const [name, setName] = useState("");
   const [password, setPassword] = useState("");
 
@@ -35,7 +34,6 @@ const Form: React.FC = (): JSX.Element => {
       <Button
         type="submit"
         buttonStyle="primary"
-        onClick={() => setCount(count + 1)}
         label="Login"
       />
     </form>
